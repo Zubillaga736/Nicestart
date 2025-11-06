@@ -10,13 +10,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Login extends AppCompatActivity {
+public class signup extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_signup);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -24,12 +24,8 @@ public class Login extends AppCompatActivity {
         });
     }
 
-    public void openMain(View v){
-        Intent intent=new Intent(Login.this, MainActivity.class);
-        startActivity(intent);
-    }
-    public void openSignUp(View v){
-        Intent intent=new Intent(Login.this, signup.class);
+    public void cancel(View v){
+        Intent intent=new Intent(signup.this, Login.class);
         startActivity(intent);
     }
 }

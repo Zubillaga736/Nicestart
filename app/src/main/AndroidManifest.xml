@@ -12,7 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nicestart">
         <activity
+            android:name=".signup"
+            android:exported="true"
+            android:parentActivityName=".Login"
+            android:theme="@style/Base.Theme.Nicestart"/>
+        <activity
             android:name=".Login"
+            android:theme="@style/Theme.Nicestart.NoActionBar"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

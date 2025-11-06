@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
-    tools:context=".Login">
+    tools:context=".signup">
 
     <ImageView
         android:id="@+id/logo"
@@ -55,28 +55,44 @@
             style="@style/buttonoutline" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/till3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/till2">
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:text="Email"
+            android:drawableStart="@drawable/email"
+            style="@style/buttonoutline" />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnsignup"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:backgroundTint="@color/azulO"
         android:layout_width="0dp"
         android:layout_height="60dp"
-        android:text="Login"
+        android:text="Sign Up"
         android:textColor="@color/white"
         android:alpha="0.8"
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
-        app:layout_constraintTop_toBottomOf="@+id/till2" />
+        app:layout_constraintTop_toBottomOf="@+id/till3" />
 
     <Button
-        android:id="@+id/btnRegister"
+        android:id="@+id/btnCancel"
         style="@style/buttonOutlined"
-        android:text="Sign up"
+        android:text="Cancel"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
-        android:onClick="openSignUp"/>
+        app:layout_constraintTop_toBottomOf="@+id/btnsignup"
+        android:onClick="cancel"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline1"
