@@ -34,7 +34,7 @@
             android:layout_height="match_parent"
             android:alpha="0.6"
             android:background="@color/white"
-            android:text="User"
+            android:hint="User"
             android:layout_gravity="center"
             />
     </com.google.android.material.textfield.TextInputLayout>
@@ -44,13 +44,14 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
+        app:passwordToggleEnabled="true"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toBottomOf="@+id/till">
 
         <EditText
             android:id="@+id/editPassword"
-            android:text="Password"
+            android:hint="Password"
             android:drawableStart="@drawable/tool"
             style="@style/buttonoutline" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -66,7 +67,7 @@
 
         <EditText
             android:id="@+id/editEmail"
-            android:text="Email"
+            android:hint="Email"
             android:drawableStart="@drawable/email"
             style="@style/buttonoutline" />
     </com.google.android.material.textfield.TextInputLayout>
