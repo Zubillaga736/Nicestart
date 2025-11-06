@@ -28,6 +28,7 @@
         app:layout_constraintTop_toBottomOf="@+id/logo">
 
         <EditText
+            android:drawableStart="@drawable/personita"
             android:id="@+id/editUser"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -49,20 +50,20 @@
 
         <EditText
             android:id="@+id/editPassword"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:alpha="0.6"
-            android:background="@color/white"
             android:text="Password"
-            android:layout_gravity="center"
-            />
+            android:drawableStart="@drawable/tool"
+            style="@style/buttonoutline" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnLogin"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:backgroundTint="@color/azulO"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="Login"
+        android:textColor="@color/white"
+        android:alpha="0.8"
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
@@ -70,10 +71,8 @@
 
     <Button
         android:id="@+id/btnRegister"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        style="@style/buttonOutlined"
         android:text="Sign up"
-        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin"/>
