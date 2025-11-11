@@ -28,4 +28,11 @@ public class signup extends AppCompatActivity {
         Intent intent=new Intent(signup.this, Login.class);
         startActivity(intent);
     }
+
+    public void openMainFromSignUp(View v){
+        Intent intent=new Intent(signup.this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+        finish();
+    }
 }

@@ -26,10 +26,13 @@ public class Login extends AppCompatActivity {
 
     public void openMain(View v){
         Intent intent=new Intent(Login.this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
+        finish();
     }
     public void openSignUp(View v){
         Intent intent=new Intent(Login.this, signup.class);
         startActivity(intent);
     }
+
 }
