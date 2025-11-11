@@ -53,7 +53,11 @@
             android:id="@+id/editPassword"
             android:hint="Password"
             android:drawableStart="@drawable/tool"
-            style="@style/buttonoutline" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.6"
+            android:background="@color/white"
+            android:layout_gravity="center" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -69,7 +73,11 @@
             android:id="@+id/editEmail"
             android:hint="Email"
             android:drawableStart="@drawable/email"
-            style="@style/buttonoutline" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.6"
+            android:background="@color/white"
+            android:layout_gravity="center" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -89,8 +97,13 @@
 
     <Button
         android:id="@+id/btnCancel"
-        style="@style/buttonOutlined"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:text="Cancel"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:textColor="@color/white"
+        android:alpha="0.8"
+        android:layout_marginTop="2dp"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toBottomOf="@+id/btnsignup"

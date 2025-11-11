@@ -53,7 +53,12 @@
             android:id="@+id/editPassword"
             android:drawableStart="@drawable/tool"
             android:hint="Password"
-            style="@style/buttonoutline" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.6"
+            android:background="@color/white"
+            android:layout_gravity="center"
+            />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -73,8 +78,15 @@
 
     <Button
         android:id="@+id/btnRegister"
-        style="@style/buttonOutlined"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:text="Sign up"
+        android:layout_width="0dp"
+        android:strokeColor="@color/azulO"
+        android:width="2dp"
+        android:layout_height="60dp"
+        android:textColor="@color/white"
+        android:alpha="0.8"
+        android:layout_marginTop="2dp"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin"

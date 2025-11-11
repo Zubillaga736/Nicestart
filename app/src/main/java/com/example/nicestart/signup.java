@@ -28,4 +28,9 @@ public class signup extends AppCompatActivity {
         Intent intent=new Intent(signup.this, Login.class);
         startActivity(intent);
     }
+
+    public void openMainFromSignUp(View v){
+        Intent intent=new Intent(signup.this, MainActivity.class);
+        startActivity(intent);
+    }
 }
