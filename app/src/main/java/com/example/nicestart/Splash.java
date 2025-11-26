@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -24,6 +26,10 @@ public class Splash extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_splash);
         openApp();
+
+        ImageView logo = findViewById(R.id.logosplash);
+        Animation blink= AnimationUtils.loadAnimation(this, R.anim.blink);
+        logo.startAnimation(blink);
 
         ImageView mSea=findViewById(R.id.backview);
         Glide.with(this)
