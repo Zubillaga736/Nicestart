@@ -9,5 +9,11 @@ Pantalla del Sign Up
 
 Pantalla del Main al tener el pulsado el texto:
 
-![main activity](img/)
+![main activity](img/menu1.png)
+
+Capturas de los Toast:
+
+![main activity](img/toast1.png)
+
+![main activity](img/toast2.png)
 > 
