@@ -15,6 +15,7 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -82,19 +83,6 @@ public class MainActivity extends AppCompatActivity {
         } else if (item.getItemId() == R.id.item2){
             Toast toast2 = Toast.makeText(this, "Downloading item", Toast.LENGTH_LONG);
             toast2.show();
-        } else if (item.getItemId() == R.id.item5){
-            MaterialAlertDialogBuilder builder=new MaterialAlertDialogBuilder(this);
-
-            builder.setTitle("¿Quieres salir?");
-            builder.setMessage("Adios");
-
-            builder.setPositiveButton("Si", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    Intent intent=new Intent(MainActivity.this, Login.class);
-                    startActivity(intent);
-                }
-            });
         }
         return false;
     }
@@ -104,5 +92,45 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    public boolean onOptionsItemSelected(MenuItem item){
+        int id=item.getItemId();
+        if(id==R.id.item5){
+            showAlertDialogButtonClicked(MainActivity.this);
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
+    public void showAlertDialogButtonClicked(MainActivity mainActivity){
+        MaterialAlertDialogBuilder builder=new MaterialAlertDialogBuilder(this);
+
+        builder.setTitle("Opciones: ");
+        builder.setMessage("¿A donde quieres ir?");
+        builder.setIcon(R.drawable.settings);
+        builder.setCancelable(true);
+
+        builder.setPositiveButton("Scrolling", new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast toast=Toast.makeText(MainActivity.this, "Scrolling", Toast.LENGTH_LONG);
+                toast.show();
+            }
+        });
+
+        builder.setNegativeButton("Nada", new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+        builder.setNeutralButton("Sign Out", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent=new Intent(MainActivity.this, Login.class);
+                startActivity(intent);
+            }
+        });
+        AlertDialog dialog=builder.create();
+        dialog.show();
+    }
 }
