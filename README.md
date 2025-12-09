@@ -11,3 +11,4 @@ Pantalla del Sign Up
    y tambien que desde el SignUp se pueda ir al Login o al Main
 4- Se ha creado la Rama Stack, exportado los estilos y temas
 5- Se ha incluido el README.md con las imagenes en la rama Main
+6- Finalizado
