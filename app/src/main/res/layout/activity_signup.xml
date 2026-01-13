@@ -34,7 +34,7 @@
             android:layout_height="match_parent"
             android:alpha="0.6"
             android:background="@color/white"
-            android:hint="User"
+            android:hint="@string/newuser"
             android:layout_gravity="center"
             />
     </com.google.android.material.textfield.TextInputLayout>
@@ -51,7 +51,7 @@
 
         <EditText
             android:id="@+id/editPassword"
-            android:hint="Password"
+            android:hint="@string/newPassword"
             android:drawableStart="@drawable/tool"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -86,7 +86,7 @@
         android:backgroundTint="@color/azulO"
         android:layout_width="0dp"
         android:layout_height="60dp"
-        android:text="Sign Up"
+        android:text="@string/btnRegistrarse"
         android:textColor="@color/white"
         android:alpha="0.8"
         android:layout_marginTop="4dp"

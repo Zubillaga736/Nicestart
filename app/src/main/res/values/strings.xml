@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Nicestart</string>
+    <string name="User">User</string>
+    <string name="Password">password</string>
+    <string name="btnAcceder">Log in</string>
+    <string name="btnRegistrarse">Sing up</string>
+    <string name="newuser">Username</string>
+    <string name="newPassword">Password</string>
+    <string name="confirmPassword">Confirm password</string>
+    <string name="btncrearcuenta">Create Account</string>
 </resources>
