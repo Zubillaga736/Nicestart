@@ -40,7 +40,7 @@ public class MainAb extends AppCompatActivity {
         bottomAppBar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainAb.this, "Menu clicked", Toast.LENGTH_SHORT).show();
+                showBottomSheetDialog();
             }
         });
 
@@ -55,41 +55,40 @@ public class MainAb extends AppCompatActivity {
                 return false;
             }
         });
+    }
+    private void showBottomSheetDialog(){
+        View view= LayoutInflater.from(this).inflate(R.layout.activity_my_bottom_sheet, null);
 
-        private void showBottomSheetDialog(){
-            View view= LayoutInflater.from(this).inflate(R.layout.activity_my_bottom_sheet, null);
+        BottomSheetDialog bottomSheetDialog=new BottomSheetDialog(this);
+        bottomSheetDialog.setContentView(view);
+        bottomSheetDialog.show();
 
-            BottomSheetDialog bottomSheetDialog=new BottomSheetDialog(this);
-            bottomSheetDialog.setContentView(view);
-            bottomSheetDialog.show();
+        TextView op1=view.findViewById(R.id.op1);
+        TextView op2=view.findViewById(R.id.op2);
+        TextView op3=view.findViewById(R.id.op3);
 
-            TextView op1=view.findViewById(R.id.op1);
-            TextView op2=view.findViewById(R.id.op2);
-            TextView op3=view.findViewById(R.id.op3);
+        op1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainAb.this, "Settings clicked", Toast.LENGTH_SHORT).show();
+                bottomSheetDialog.dismiss();
+            }
+        });
 
-            op1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Toast.makeText(MainAb.this, "Settings clicked", Toast.LENGTH_SHORT).show();
-                    bottomSheetDialog.dismiss();
-                }
-            });
+        op2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainAb.this, "About clicked", Toast.LENGTH_SHORT).show();
+                bottomSheetDialog.dismiss();
+            }
+        });
 
-            op2.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Toast.makeText(MainAb.this, "About clicked", Toast.LENGTH_SHORT).show();
-                    bottomSheetDialog.dismiss();
-                }
-            });
-
-            op3.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Toast.makeText(MainAb.this, "Logout clicked", Toast.LENGTH_SHORT).show();
-                    bottomSheetDialog.dismiss();
-                }
-            });
-        }
+        op3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainAb.this, "Logout clicked", Toast.LENGTH_SHORT).show();
+                bottomSheetDialog.dismiss();
+            }
+        });
     }
 }
